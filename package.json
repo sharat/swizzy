@@ -1,0 +1,30 @@
+{
+  "name": "swizzy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Sarath C",
+    "url": "http://sarat.io/"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "flow": "flow check"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.44.2",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "inherits": "^2.0.3",
+    "minimist": "^1.2.0",
+    "readable-stream": "^2.2.9",
+    "text-table": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sharat/swizzy.git"
+  }
+}
