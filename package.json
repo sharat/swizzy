@@ -12,6 +12,9 @@
     "lint-fix": "standard --fix",
     "flow": "flow check"
   },
+  "bin": {
+    "swizzy": "./bin/cmd.js"
+  },
   "devDependencies": {
     "flow-bin": "^0.44.2",
     "standard": "^10.0.2"
@@ -26,5 +29,20 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/sharat/swizzy.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/sharat/swizzy/issues"
+  },
+  "keywords": [
+    "pretty",
+    "pretty output",
+    "snazzy standard",
+    "standard",
+    "standard pretty",
+    "stylish",
+    "stylish for standard",
+    "stylish formatter",
+    "stylish reporter",
+    "stylish standard"
+  ],
 }
