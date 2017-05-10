@@ -9,5 +9,11 @@ Swizzy is a pretty formatter for Swiftlint linter output. This project is heavil
 
 ## Install
 ```
-npm install swizzy
+npm install -g swizzy
+# or
+yarn global add swizzy
+
+brew install swiftlint
+
+swiftlint lint | swizzy
 ```
