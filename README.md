@@ -5,6 +5,8 @@ Swizzy is a pretty formatter for Swiftlint linter output. This project is heavil
 
 [standard-url]: https://standardjs.com
 
+![JavaScript Style Guide](./output.png)
+
 ### Format Swiftlint as compact and stylish output.
 
 ## Install
