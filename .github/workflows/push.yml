@@ -1,4 +1,8 @@
-on: push
+on: 
+  push:
+    branches:
+    - master
+
 name: Build, Test, and Publish
 jobs:
   build:
@@ -14,10 +18,10 @@ jobs:
     #   uses: actions/npm@master
     #   with:
     #     args: test
-    - name: Master
-      uses: actions/bin/filter@master
-      with:
-        args: branch master
+    # - name: Master
+    #   uses: actions/bin/filter@master
+    #   with:
+    #     args: branch master
     - name: Publish
       uses: actions/npm@master
       env:
