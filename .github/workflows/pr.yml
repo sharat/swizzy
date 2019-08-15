@@ -2,7 +2,7 @@ on: pull_request
 name: Linting
 jobs:
   lint:
-    name: Link
+    name: Lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
