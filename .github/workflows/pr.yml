@@ -13,4 +13,4 @@ jobs:
     - name: Lint
       uses: actions/npm@master
       with:
-        args: flow
+        args: "run flow"
