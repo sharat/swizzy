@@ -1,6 +1,6 @@
 // @flow
 
-function jsonify (rawText) {
+function jsonify (rawText: string) {
   var lines = rawText.split('\n')
   if (lines[lines.length - 1] === '') lines.pop()
   var resultMap = {}
