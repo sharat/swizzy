@@ -1,0 +1,16 @@
+on: pull_request
+name: Linting
+jobs:
+  lint:
+    name: Link
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      uses: actions/npm@master
+      with:
+        args: install
+    - name: Lint
+      uses: actions/npm@master
+      with:
+        args: flow
