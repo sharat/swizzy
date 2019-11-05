@@ -16,6 +16,7 @@
     "swizzy": "./bin/cmd.js"
   },
   "devDependencies": {
+    "eslint": "^6.6.0",
     "flow-bin": "^0.44.2",
     "standard": "^10.0.3"
   },
