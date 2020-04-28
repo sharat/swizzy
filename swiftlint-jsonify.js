@@ -1,17 +1,18 @@
 // @flow
 
-function jsonify (rawText: string) {
-  var lines = rawText.split('\n')
+function jsonify (rawText) {
+  const lines = rawText.split('\n')
+
   if (lines[lines.length - 1] === '') lines.pop()
   var resultMap = {}
   var results = []
+
+  console.log(lines.length);
 
   lines.forEach(function (line) {
     var re = /\s*([^:]+):([^:]+):([^:]+): ([^:]+): ([^:]+): (.*?)?$/.exec(line)
 
     if (!re) return console.error(line)
-
-    var noColums = false
 
     // Cases like where there are no columns in the string, 
     // just line numbers like length of the line
