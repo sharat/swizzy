@@ -7,8 +7,6 @@ function jsonify (rawText) {
   var resultMap = {}
   var results = []
 
-  console.log(lines.length);
-
   lines.forEach(function (line) {
     var re = /\s*([^:]+):([^:]+):([^:]+): ([^:]+): ([^:]+): (.*?)?$/.exec(line)
 
