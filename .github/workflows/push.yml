@@ -1,7 +1,7 @@
-on: 
+on:
   push:
     branches:
-    - master
+    - main
 
 name: Build, Test, and Publish
 jobs:
