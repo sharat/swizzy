@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-var CompactStream = require('../')
-var minimist = require('minimist')
+const CompactStream = require('../')
+const minimist = require('minimist')
 
-var argv = minimist(process.argv.slice(2), {
+const argv = minimist(process.argv.slice(2), {
   boolean: [
     'stdin'
   ]
 })
 
 if (!process.stdin.isTTY || argv._[0] === '-' || argv.stdin) {
-  var swizzy = new CompactStream()
+  const swizzy = new CompactStream()
 
   // Set the process exit code based on whether pretty found errors
   process.on('exit', function (code) {

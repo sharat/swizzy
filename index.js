@@ -1,10 +1,10 @@
 // @flow
 
-var jsonify = require('./swiftlint-jsonify')
-var chalk = require('chalk')
-var table = require('text-table')
-var stream = require('readable-stream')
-var inherits = require('inherits')
+const jsonify = require('./swiftlint-jsonify')
+const chalk = require('chalk')
+const table = require('text-table')
+const stream = require('readable-stream')
+const inherits = require('inherits')
 
 inherits(CompactStream, stream.Transform)
 
@@ -24,9 +24,9 @@ CompactStream.prototype._transform = function (chunk, encoding, cb) {
 }
 
 CompactStream.prototype._flush = function (cb) {
-  var lines = Buffer.concat(this._buffer).toString()
-  var json = jsonify(lines)
-  var output = processResults(json)
+  const lines = Buffer.concat(this._buffer).toString()
+  const json = jsonify(lines)
+  const output = processResults(json)
   this.push(output)
 
   this.exitCode = output === '' ? 0 : 1
@@ -38,11 +38,11 @@ function pluralize (word, count) {
 }
 
 function processResults (results) {
-  var output = '\n'
-  var total = 0
+  let output = '\n'
+  let total = 0
 
   results.forEach(function (result) {
-    var messages = result.messages
+    const messages = result.messages
 
     if (messages.length === 0) {
       return
@@ -53,7 +53,7 @@ function processResults (results) {
 
     output += table(
       messages.map(function (message) {
-        var messageType
+        let messageType
         if (message.type === 'warning') {
           messageType = chalk.yellow('warning')
         } else {

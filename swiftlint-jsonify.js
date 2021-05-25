@@ -4,22 +4,22 @@ function jsonify (rawText) {
   const lines = rawText.split('\n')
 
   if (lines[lines.length - 1] === '') lines.pop()
-  var resultMap = {}
-  var results = []
+  const resultMap = {}
+  const results = []
 
   lines.forEach(function (line) {
-    var re = /\s*([^:]+):([^:]+):([^:]+): ([^:]+): ([^:]+): (.*?)?$/.exec(line)
+    const re = /\s*([^:]+):([^:]+):([^:]+): ([^:]+): ([^:]+): (.*?)?$/.exec(line)
 
     if (!re) return console.error(line)
 
-    // Cases like where there are no columns in the string, 
+    // Cases like where there are no columns in the string,
     // just line numbers like length of the line
-    if(isNaN(parseInt(re[3]))) {
+    if (isNaN(parseInt(re[3]))) {
       re.splice(3, 0, '0')
     }
 
-    var filePath = re[1]
-    var result = resultMap[filePath]
+    const filePath = re[1]
+    let result = resultMap[filePath]
     if (!result) {
       result = resultMap[filePath] = {
         filePath: re[1],
