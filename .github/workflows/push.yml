@@ -9,22 +9,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Build
-      uses: actions/npm@master
+    - uses: actions/setup-node@v2
       with:
-        args: install
-    # - name: Test
-    #   uses: actions/npm@master
-    #   with:
-    #     args: test
-    # - name: Master
-    #   uses: actions/bin/filter@master
-    #   with:
-    #     args: branch master
+        node-version: '16'
+
     - name: Publish
-      uses: actions/npm@master
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      with:
-        args: publish --access public
+      run: |
+        npm publish --access public
