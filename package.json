@@ -21,13 +21,13 @@
     "swizzy": "./bin/cmd.js"
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
-    "flow-bin": "^0.151.0",
-    "jest": "^27.0.1",
-    "standard": "^16.0.3"
+    "eslint": "^8.4.0",
+    "flow-bin": "^0.166.1",
+    "jest": "^27.4.3",
+    "standard": "^16.0.4"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
+    "chalk": "^5.0.0",
     "inherits": "^2.0.3",
     "minimist": "^1.2.5",
     "readable-stream": "^3.6.0",
