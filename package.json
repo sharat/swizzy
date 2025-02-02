@@ -1,36 +1,46 @@
 {
   "name": "swizzy",
-  "version": "1.0.6",
-  "main": "index.js",
+  "version": "2.0.0",
+  "main": "dist/index.js",
   "license": "MIT",
   "engines": {
-    "node": "16",
-    "vscode": "^1.22.0"
+    "node": ">=18"
   },
   "author": {
     "name": "Sarath C",
     "url": "http://sarat.io/"
   },
   "scripts": {
-    "lint": "standard",
-    "lint-fix": "standard --fix",
-    "flow": "flow check",
-    "test": "jest"
+    "build": "tsc && chmod +x dist/index.js",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "start": "node dist/index.js",
+    "test": "npm run build && jest"
   },
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "swizzy": "./bin/cmd.js"
+    "swizzy": "./dist/index.js"
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
-    "flow-bin": "^0.151.0",
-    "jest": "^27.0.1",
-    "standard": "^16.0.3"
+    "@types/chalk": "^0.4.31",
+    "@types/node": "^22.13.0",
+    "@types/text-table": "^0.2.5",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "standard": "^16.0.3",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
-    "inherits": "^2.0.3",
-    "minimist": "^1.2.5",
-    "readable-stream": "^3.6.0",
+    "ansicolor": "^2.0.3",
+    "chalk": "^5.4.1",
+    "inherits": "^2.0.4",
+    "minimist": "^1.2.8",
+    "readable-stream": "^4.7.0",
     "text-table": "^0.2.0"
   },
   "repository": {

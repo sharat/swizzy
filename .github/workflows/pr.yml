@@ -1,16 +1,22 @@
-on: pull_request
-name: Linting
+name: Lint
+on:
+  pull_request:
+
 jobs:
   lint:
-    name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: NPM Install
-      uses: actions/npm@master
-      with:
-        args: install
-    - name: Lint
-      uses: actions/npm@master
-      with:
-        args: "run flow"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Flow
+        run: npm run lint
