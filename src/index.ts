@@ -47,8 +47,8 @@ export class CompactStream extends Transform {
 
       output += table(
         result.messages.map(message => {
-          const messageType = message.type === 'warning' 
-            ? chalk.yellow('warning') 
+          const messageType = message.type === 'warning'
+            ? chalk.yellow('warning')
             : chalk.red('error');
 
           return [
@@ -65,9 +65,9 @@ export class CompactStream extends Transform {
           stringLength: (str: string) => strip(str).length
         }
       )
-      .split('\n')
-      .map(el => el.replace(/(\d+)\s+(\d+)/, (_, p1, p2) => chalk.dim(`${p1}:${p2}`)))
-      .join('\n') + '\n\n';
+        .split('\n')
+        .map(el => el.replace(/(\d+)\s+(\d+)/, (_, p1, p2) => chalk.dim(`${p1}:${p2}`)))
+        .join('\n') + '\n\n';
     }
 
     if (total > 0) {
@@ -80,6 +80,7 @@ export class CompactStream extends Transform {
 
 // At the end of index.ts
 if (require.main === module) {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { CompactStream } = require('./index');
   const compactStream = new CompactStream();
   process.stdin.pipe(compactStream).pipe(process.stdout);

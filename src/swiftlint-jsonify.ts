@@ -1,4 +1,4 @@
-import { SwiftlintResult, SwiftlintMessage } from './types';
+import { SwiftlintResult } from './types';
 
 const LINE_REGEX = /^\s*([^:]+):(\d+)(?::(\d+))?: ([^:]+): ([^:]+): (.*)$/;
 
@@ -14,7 +14,7 @@ export function jsonify(rawText: string): SwiftlintResult[] {
     }
 
     const [, filePath, lineNum, column = '0', type, ruleId, message] = match;
-    
+
     if (!resultsMap.has(filePath)) {
       resultsMap.set(filePath, {
         filePath,
@@ -24,7 +24,7 @@ export function jsonify(rawText: string): SwiftlintResult[] {
 
     // Add type assertion here
     const messageType = type as 'warning' | 'error';
-    
+
     resultsMap.get(filePath)!.messages.push({
       line: lineNum,
       column,
