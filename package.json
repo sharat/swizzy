@@ -1,21 +1,20 @@
 {
   "name": "swizzy",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "engines": {
-    "node": "22"
+    "node": ">=18"
   },
   "author": {
     "name": "Sarath C",
     "url": "http://sarat.io/"
   },
   "scripts": {
-    "build": "tsc && postbuild",
+    "build": "tsc && chmod +x dist/index.js",
     "prepublishOnly": "npm run build",
-    "postbuild": "chmod +x dist/index.js",
     "start": "node dist/index.js",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "files": [
     "dist"
@@ -28,8 +27,7 @@
     "@types/node": "^22.13.0",
     "@types/text-table": "^0.2.5",
     "eslint": "^7.27.0",
-    "flow-bin": "^0.151.0",
-    "jest": "^27.0.1",
+    "jest": "^29.7.0",
     "standard": "^16.0.3",
     "typescript": "^5.7.3"
   },
