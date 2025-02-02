@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": "16",
-    "vscode": "^1.22.0"
+    "node": "18"
   },
   "author": {
     "name": "Sarath C",
@@ -27,10 +26,10 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
-    "inherits": "^2.0.3",
-    "minimist": "^1.2.5",
-    "readable-stream": "^3.6.0",
+    "chalk": "^5.4.1",
+    "inherits": "^2.0.4",
+    "minimist": "^1.2.8",
+    "readable-stream": "^4.7.0",
     "text-table": "^0.2.0"
   },
   "repository": {
