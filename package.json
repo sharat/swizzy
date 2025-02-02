@@ -1,7 +1,7 @@
 {
   "name": "swizzy",
   "version": "1.0.6",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "engines": {
     "node": "22"
@@ -11,12 +11,17 @@
     "url": "http://sarat.io/"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && postbuild",
+    "prepublishOnly": "npm run build",
+    "postbuild": "chmod +x dist/index.js",
     "start": "node dist/index.js",
     "test": "jest"
   },
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "swizzy": "./bin/cmd.js"
+    "swizzy": "./dist/index.js"
   },
   "devDependencies": {
     "@types/chalk": "^0.4.31",

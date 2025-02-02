@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from 'chalk';
 import { Transform } from 'stream';
 import table from 'text-table';
