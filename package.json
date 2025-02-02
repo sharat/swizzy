@@ -22,7 +22,7 @@
     "dist"
   ],
   "bin": {
-    "swizzy": "./dist/index.js"
+    "swizzy": "dist/index.js"
   },
   "devDependencies": {
     "@types/chalk": "^0.4.31",
