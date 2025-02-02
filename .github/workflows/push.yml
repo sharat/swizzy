@@ -1,20 +1,32 @@
+name: Build, Test, and Publish
 on:
   push:
     branches:
-    - main
+      - main
 
-name: Build, Test, and Publish
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '16'
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Publish
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      run: |
-        npm publish --access public
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Uncomment and modify the following steps if you have build and test scripts
+      #- name: Build
+      #  run: npm run build
+      #- name: Run tests
+      #  run: npm test
+
+      - name: Publish package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npm publish --access public
