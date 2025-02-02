@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": "18"
+    "node": "22"
   },
   "author": {
     "name": "Sarath C",
@@ -20,10 +20,14 @@
     "swizzy": "./bin/cmd.js"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.4",
+    "@types/node": "^22.13.0",
+    "@types/text-table": "^0.2.5",
     "eslint": "^7.27.0",
     "flow-bin": "^0.151.0",
     "jest": "^27.0.1",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "chalk": "^5.4.1",
