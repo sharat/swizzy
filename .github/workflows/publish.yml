@@ -18,13 +18,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      # Uncomment and modify the following steps if you have build and test scripts
-      #- name: Build
-      #  run: npm run build
-      #- name: Run tests
-      #  run: npm test
+      - name: Build
+        run: npm run build
+      - name: Run tests
+        run: npm test
 
       - name: Publish package
         env:
