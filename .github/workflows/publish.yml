@@ -25,6 +25,10 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Setup NPM
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
       - name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
