@@ -17,14 +17,8 @@ Swizzy is a pretty formatter for SwiftLint output. It transforms SwiftLint's sta
 
 ## Installation
 
-You can install swizzy globally using npm or yarn:
-
 ```bash
-# Using npm
 npm install -g swizzy
-
-# Using yarn
-yarn global add swizzy
 ```
 
 Make sure you have SwiftLint installed:
@@ -35,21 +29,51 @@ brew install swiftlint
 
 ## Usage
 
-Simply pipe SwiftLint output to swizzy:
+Swizzy can be used in two main ways:
+
+1.  **Piping SwiftLint Output (Recommended):**
+
+    Run `swiftlint` with the `--reporter json` flag and pipe the output directly to `swizzy`. This is the most reliable method.
+
+    ```bash
+    swiftlint lint --reporter json | swizzy
+    ```
+
+2.  **Automatic SwiftLint Execution:**
+
+    If you run `swizzy` without any piped input, it will attempt to execute `swiftlint lint --reporter json` automatically for you. **Note:** This requires `swiftlint` to be installed and accessible in your system's PATH.
+
+    ```bash
+    swizzy
+    ```
+
+### Options
+
+*   `--help`, `-h`: Show help message.
+*   `--version`, `-v`: Show version number.
 
 ```bash
-swiftlint lint --reporter json | swizzy
+swizzy --help
+swizzy -v
 ```
 
-Or use it in your package.json scripts:
+### Example in `package.json`
+
+You can integrate `swizzy` into your npm scripts:
 
 ```json
 {
   "scripts": {
-    "lint:swift": "swiftlint lint | swizzy"
+    "lint": "swiftlint lint --reporter json | swizzy"
   }
 }
 ```
+
+Then run `npm run lint`.
+
+## Screenshot
+
+![JavaScript Style Guide](./output.png)
 
 ## Development
 
@@ -79,7 +103,7 @@ npm run lint:fix
 
 ## Testing
 
-Swizzy uses Jest for testing. Run the test suite with:
+To run the basic test case included in the repository (which uses a predefined anonymized JSON file):
 
 ```bash
 cat anonymized_lint.json | node dist/index.js
