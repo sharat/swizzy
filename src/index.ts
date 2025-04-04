@@ -3,9 +3,8 @@
 import chalk from 'chalk';
 import { Transform } from 'stream';
 import table from 'text-table';
-import { jsonify } from './swiftlint-jsonify';
 import { strip } from 'ansicolor';
-import { SwiftlintResult } from './types';
+import { SwiftlintJsonIssue } from './types';
 
 export class CompactStream extends Transform {
   private exitCode: number;
@@ -24,40 +23,52 @@ export class CompactStream extends Transform {
 
   _flush(cb: (error?: Error | null) => void): void {
     try {
-      const lines = Buffer.concat(this.buffer).toString();
-      const json = jsonify(lines);
-      const output = this.processResults(json);
+      const inputString = Buffer.concat(this.buffer).toString();
+      const issues: SwiftlintJsonIssue[] = JSON.parse(inputString);
+      const output = this.processSwiftlintIssues(issues);
       this.push(output);
       this.exitCode = output === '' ? 0 : 1;
       cb();
     } catch (error) {
-      cb(error instanceof Error ? error : new Error(String(error)));
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      cb(new Error(`Failed to parse SwiftLint JSON output: ${errorMessage}`));
     }
   }
 
-  private processResults(results: SwiftlintResult[]): string {
+  private processSwiftlintIssues(issues: SwiftlintJsonIssue[]): string {
+    if (issues.length === 0) {
+      return '';
+    }
+
+    const issuesByFile = new Map<string, SwiftlintJsonIssue[]>();
+    for (const issue of issues) {
+      const fileIssues = issuesByFile.get(issue.file) || [];
+      fileIssues.push(issue);
+      issuesByFile.set(issue.file, fileIssues);
+    }
+
     let output = '\n';
-    let total = 0;
+    let total = issues.length;
 
-    for (const result of results) {
-      if (result.messages.length === 0) continue;
+    const sortedFiles = Array.from(issuesByFile.keys()).sort();
 
-      total += result.messages.length;
-      output += chalk.underline(result.filePath) + '\n';
+    for (const filePath of sortedFiles) {
+      const fileIssues = issuesByFile.get(filePath)!;
+      output += chalk.underline(filePath) + '\n';
 
       output += table(
-        result.messages.map(message => {
-          const messageType = message.type === 'warning'
+        fileIssues.map(issue => {
+          const messageType = issue.severity === 'Warning'
             ? chalk.yellow('warning')
             : chalk.red('error');
 
           return [
             '',
-            message.line || '0',
-            message.column || '0',
+            issue.line?.toString() ?? '0',
+            issue.character?.toString() ?? '0',
             messageType,
-            message.message.replace(/\.$/, ''),
-            chalk.dim(message.ruleId || '')
+            issue.reason.replace(/\.$/, ''),
+            chalk.dim(issue.rule_id ?? '')
           ];
         }),
         {
@@ -74,7 +85,7 @@ export class CompactStream extends Transform {
       output += chalk.red.bold(`\u2716 ${total} problem${total === 1 ? '' : 's'}\n`);
     }
 
-    return total > 0 ? output : '';
+    return output;
   }
 }
 
