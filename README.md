@@ -38,7 +38,7 @@ brew install swiftlint
 Simply pipe SwiftLint output to swizzy:
 
 ```bash
-swiftlint lint | swizzy
+swiftlint lint --reporter json | swizzy
 ```
 
 Or use it in your package.json scripts:
