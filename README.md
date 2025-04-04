@@ -82,7 +82,7 @@ npm run lint:fix
 Swizzy uses Jest for testing. Run the test suite with:
 
 ```bash
-npm test
+cat anonymized_lint.json | node dist/index.js
 ```
 
 ## Contributing
