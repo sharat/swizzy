@@ -30,9 +30,11 @@ export const SwiftlintJsonIssueSchema = z.object({
   file: z.string(),
   line: z.number(),
   reason: z.string(),
+  // eslint-disable-next-line camelcase
   rule_id: z.string(),
-  severity: z.enum(['Warning', 'Error']), // Matches 'Warning' | 'Error'
-  type: z.string(),
+  severity: z.enum(['Warning', 'Error']) // Matches 'Warning' | 'Error'
+  ,
+  type: z.string()
 });
 
 // Zod schema for validating the entire array of issues

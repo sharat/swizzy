@@ -7,14 +7,16 @@ import { strip } from 'ansicolor';
 import { SwiftlintJsonIssue, SwiftlintJsonOutputSchema } from './types';
 import { spawn } from 'child_process';
 import minimist from 'minimist';
+import { z } from 'zod';
 
 // Read package.json to get the version
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const pkg = require('../package.json');
 const VERSION = pkg.version;
 
 // --- Usage Function ---
-function printUsage() {
+function printUsage(): void {
+  // eslint-disable-next-line no-console
   console.log(`
 Usage: swizzy [options]
 
@@ -64,7 +66,7 @@ export class CompactStream extends Transform {
       const validationResult = SwiftlintJsonOutputSchema.safeParse(parsedJson);
 
       if (!validationResult.success) {
-        const errorDetails = validationResult.error.errors.map(e => 
+        const errorDetails = validationResult.error.issues.map((e: z.ZodIssue) =>
           `Path: ${e.path.join('.') || ''} - Message: ${e.message}`
         ).join('; ');
         throw new Error(`Invalid SwiftLint JSON structure: ${errorDetails}`);
@@ -78,13 +80,13 @@ export class CompactStream extends Transform {
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
       if (!process.stdin.isTTY && // Only print usage for piped input errors
-          (errorMessage.startsWith('Invalid SwiftLint JSON structure:') || 
+          (errorMessage.startsWith('Invalid SwiftLint JSON structure:') ||
            errorMessage.startsWith('Failed to parse SwiftLint JSON input:')))
       {
-          printUsage();
-          this.exitCode = 1; // Set exit code for error
-          cb(null); // Signal flush is done, but with an error state
-          return; // Don't proceed further in the catch block
+        printUsage();
+        this.exitCode = 1; // Set exit code for error
+        cb(null); // Signal flush is done, but with an error state
+        return; // Don't proceed further in the catch block
       }
       // For direct execution errors or other error types, pass the error
       if (errorMessage.startsWith('Invalid SwiftLint JSON structure:')) {
@@ -108,7 +110,7 @@ export class CompactStream extends Transform {
     }
 
     let output = '\n';
-    let total = issues.length;
+    const total = issues.length;
 
     const sortedFiles = Array.from(issuesByFile.keys()).sort();
 
@@ -150,7 +152,7 @@ export class CompactStream extends Transform {
 }
 
 // Helper function to run swiftlint and pipe its output
-function runSwiftlintAndPipe(stream: CompactStream) {
+function runSwiftlintAndPipe(stream: CompactStream): void {
   console.error('No input piped. Running `swiftlint lint --reporter json`...');
   const swiftlintProcess = spawn('swiftlint', ['lint', '--reporter', 'json']);
 
@@ -184,6 +186,7 @@ if (require.main === module) {
 
   // Check for version flag
   if (args.version || args.v) {
+    // eslint-disable-next-line no-console
     console.log(VERSION);
     process.exit(0);
   }
@@ -203,11 +206,11 @@ if (require.main === module) {
   compactStream.on('end', () => {
     // Access the exitCode property set in _flush
     // Need type assertion as Transform doesn't have exitCode by default
-    const exitCode = (compactStream as any).exitCode ?? 0;
+    const exitCode = (compactStream as unknown as { exitCode: number }).exitCode ?? 0;
     process.exit(exitCode);
   });
   compactStream.on('error', (err) => {
-    console.error("Stream Error:", err);
+    console.error('Stream Error:', err);
     process.exit(1);
   });
 
