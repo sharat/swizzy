@@ -1,0 +1,11 @@
+[
+  {
+    "character": 25,
+    "file": "/Users/dev/Project/Sources/main.swift",
+    "line": 12,
+    "reason": "Use of unresolved identifier 'undefined_variable'",
+    "rule_id": "unresolved_identifier",
+    "severity": "Error",
+    "type": "Compilation Error"
+  }
+]

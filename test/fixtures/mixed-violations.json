@@ -1,0 +1,56 @@
+[
+  {
+    "character": 18,
+    "file": "/Users/developer/MyApp/Sources/AuthManager.swift",
+    "line": 42,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/AuthManager.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 95,
+    "file": "/Users/developer/MyApp/Sources/Views/LoginViewController.swift",
+    "line": 128,
+    "reason": "Line should be 100 characters or less: currently 105 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 24,
+    "file": "/Users/developer/MyApp/Sources/Views/LoginViewController.swift",
+    "line": 89,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/MyApp/Sources/Models/Session.swift",
+    "line": 156,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/Utils/Helpers.swift",
+    "line": 78,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  }
+]

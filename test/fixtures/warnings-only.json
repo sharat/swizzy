@@ -1,0 +1,38 @@
+[
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/ViewController.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 120,
+    "file": "/Users/developer/MyApp/Sources/NetworkManager.swift",
+    "line": 42,
+    "reason": "Line should be 100 characters or less: currently 135 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/MyApp/Sources/Models/User.swift",
+    "line": 18,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/MyApp/Sources/Utils/StringExtension.swift",
+    "line": 33,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  }
+]

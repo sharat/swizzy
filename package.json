@@ -1,53 +1,68 @@
 {
   "name": "swizzy",
-  "version": "2.2.0",
+  "version": "2.3.0",
+  "description": "A modern CLI tool that beautifies SwiftLint JSON output into readable formats",
+  "type": "commonjs",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "author": {
     "name": "Sarath C",
-    "url": "http://sarat.io/"
+    "url": "https://sarat.io/"
   },
   "scripts": {
     "build": "tsc && chmod +x dist/index.js",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "start": "node dist/index.js"
+    "prepublishOnly": "npm run build && npm test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "node dist/index.js",
+    "test": "vitest run --config vitest.config.ts",
+    "test:integration": "vitest run --config vitest.config.integration.ts",
+    "test:integration:watch": "vitest --config vitest.config.integration.ts --watch",
+    "test:integration:coverage": "vitest run --config vitest.config.integration.ts --coverage",
+    "test:performance": "vitest run --config vitest.config.integration.ts -t \"Performance\"",
+    "test:ci": "vitest run --config vitest.config.integration.ts --maxWorkers=2 --coverage",
+    "test:smoke": "node test/integration/smoke-test.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "bin": {
     "swizzy": "dist/index.js"
   },
   "devDependencies": {
-    "@types/chalk": "^0.4.31",
-    "@types/minimist": "^1.2.5",
-    "@types/node": "^22.14.0",
+    "@types/node": "^25.3.3",
     "@types/text-table": "^0.2.5",
-    "@typescript-eslint/eslint-plugin": "^8.29.0",
-    "@typescript-eslint/parser": "^8.29.0",
-    "eslint": "^9.23.0",
-    "jest": "^29.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.2",
     "standard": "^17.1.2",
-    "ts-jest": "^29.3.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
-    "ansicolor": "^2.0.3",
-    "chalk": "^5.4.1",
     "inherits": "^2.0.4",
-    "minimist": "^1.2.8",
+    "picocolors": "^1.1.1",
     "readable-stream": "^4.7.0",
     "text-table": "^0.2.0",
-    "zod": "^3.24.2"
+    "zod": "^4.3.6"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sharat/swizzy.git"
+    "url": "git+https://github.com/sharat/swizzy.git"
   },
   "bugs": {
     "url": "https://github.com/sharat/swizzy/issues"

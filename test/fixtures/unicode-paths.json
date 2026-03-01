@@ -1,0 +1,47 @@
+[
+  {
+    "character": 25,
+    "file": "/Users/developer/MyApp/Sources/Controllers/用户管理.swift",
+    "line": 18,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 32,
+    "file": "/Users/developer/MyApp/Sources/Models/Configuración.swift",
+    "line": 145,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/MyApp/Sources/Views/Pokémon🎮List.swift",
+    "line": 33,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/MyApp/Sources/Utils/Français/StringHelper.swift",
+    "line": 156,
+    "reason": "Variable 'variableWithÅccents' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/Resources/日本語/LocalizedStrings.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  }
+]

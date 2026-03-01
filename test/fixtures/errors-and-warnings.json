@@ -1,0 +1,56 @@
+[
+  {
+    "character": 5,
+    "file": "/Users/dev/MyApp/Sources/AppDelegate.swift",
+    "line": 23,
+    "reason": "Missing implementation of required method 'application(_:didFinishLaunchingWithOptions:)'",
+    "rule_id": "missing_required_method",
+    "severity": "Error",
+    "type": "Required Method"
+  },
+  {
+    "character": null,
+    "file": "/Users/dev/MyApp/Sources/ViewController.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 15,
+    "file": "/Users/dev/MyApp/Sources/Model/User.swift",
+    "line": 45,
+    "reason": "Variable 'x' is declared but never used",
+    "rule_id": "unused_variable",
+    "severity": "Error",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 89,
+    "file": "/Users/dev/MyApp/Sources/NetworkManager.swift",
+    "line": 78,
+    "reason": "Line should be 100 characters or less: currently 127 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 12,
+    "file": "/Users/dev/MyApp/Sources/Utils/Extensions.swift",
+    "line": 33,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 8,
+    "file": "/Users/dev/MyApp/Sources/AppDelegate.swift",
+    "line": 56,
+    "reason": "Force cast is discouraged",
+    "rule_id": "force_cast",
+    "severity": "Warning",
+    "type": "Force Cast"
+  }
+]

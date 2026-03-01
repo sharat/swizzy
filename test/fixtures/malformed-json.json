@@ -1,0 +1,18 @@
+[
+  {
+    "character": 45,
+    "file": "/Users/developer/MyApp/Sources/AppDelegate.swift",
+    "line": 23,
+    "reason": "Line should be 100 characters or less: currently 112 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 18,
+    "file": "/Users/developer/MyApp/Sources/DataService.swift"
+    "line": 67,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error"
+    "type": "Force Cast"

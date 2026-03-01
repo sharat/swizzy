@@ -1,0 +1,15 @@
+[
+  {
+    "wrong_field": "value",
+    "missing_required": "fields"
+  },
+  {
+    "character": "should_be_number",
+    "file": 123,
+    "line": "should_be_number",
+    "reason": "Invalid reason format",
+    "rule_id": "test_rule",
+    "severity": "InvalidSeverity",
+    "type": "Invalid Type"
+  }
+]

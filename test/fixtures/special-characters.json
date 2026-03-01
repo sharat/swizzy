@@ -1,0 +1,56 @@
+[
+  {
+    "character": 25,
+    "file": "/Users/developer/MyApp/Sources/Special Characters & Symbols/File[Name].swift",
+    "line": 18,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 32,
+    "file": "/Users/developer/MyApp/Sources/Path With (Parentheses)/DataManager.swift",
+    "line": 145,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/MyApp/Sources/Models/User's Data.swift",
+    "line": 33,
+    "reason": "Variable name 'some_var' contains underscore: 'someVar' should be preferred",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/MyApp/Sources/Utils/String\"Quote\"Helper.swift",
+    "line": 156,
+    "reason": "Variable 'variable$WithDollar' contains special characters",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/Resources/@Resource/LocalizedStrings.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 45,
+    "file": "/Users/developer/MyApp/Sources/Components/#Important!/CriticalView.swift",
+    "line": 89,
+    "reason": "Line should be 100 characters or less: currently 156 characters with special symbols \\n and tabs \\t",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  }
+]

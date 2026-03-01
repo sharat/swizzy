@@ -1,0 +1,17 @@
+[
+  {
+    "invalid_field": "this should not exist",
+    "file": "/Users/developer/MyApp/Sources/AppDelegate.swift",
+    "line": "not a number",
+    "reason": "Line should be 100 characters or less",
+    "rule_id": null,
+    "severity": "InvalidSeverity",
+    "type": "Line Length"
+  },
+  {
+    "character": -5,
+    "reason": "Missing file field",
+    "rule_id": "line_length",
+    "severity": "Warning"
+  }
+]

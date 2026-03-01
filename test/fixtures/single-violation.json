@@ -1,0 +1,11 @@
+[
+  {
+    "character": 45,
+    "file": "/Users/developer/MyApp/Sources/AppDelegate.swift",
+    "line": 23,
+    "reason": "Line should be 100 characters or less: currently 112 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  }
+]

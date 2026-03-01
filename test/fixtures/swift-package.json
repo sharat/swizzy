@@ -1,0 +1,119 @@
+[
+  {
+    "character": null,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/MyPackage.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 120,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Core/Engine.swift",
+    "line": 42,
+    "reason": "Line should be 100 characters or less: currently 135 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 18,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Core/Engine.swift",
+    "line": 67,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Models/Configuration.swift",
+    "line": 18,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 32,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Utils/Logger.swift",
+    "line": 145,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Protocols/Configurable.swift",
+    "line": 33,
+    "reason": "Variable name 'id' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Extensions/String+Utils.swift",
+    "line": 156,
+    "reason": "Variable 'tempResult' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MySwiftPackage/Tests/MyPackageTests/EngineTests.swift",
+    "line": 400,
+    "reason": "File should contain 400 lines or less: currently contains 420",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 45,
+    "file": "/Users/developer/MySwiftPackage/Tests/MyPackageTests/ConfigurationTests.swift",
+    "line": 78,
+    "reason": "Line should be 100 characters or less: currently 115 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MySwiftPackage/Tests/MyPackageTests/LoggerTests.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 15,
+    "file": "/Users/developer/MySwiftPackage/Tests/MyPackageTests/StringUtilsTests.swift",
+    "line": 89,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Internal/InternalHelpers.swift",
+    "line": 45,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 60,
+    "file": "/Users/developer/MySwiftPackage/Sources/MyPackage/Public/PublicAPI.swift",
+    "line": 23,
+    "reason": "Function body should be 40 lines or less: currently contains 55 lines",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  }
+]

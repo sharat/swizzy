@@ -1,0 +1,29 @@
+[
+  {
+    "character": 18,
+    "file": "/Users/developer/MyApp/Sources/DataService.swift",
+    "line": 67,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 32,
+    "file": "/Users/developer/MyApp/Sources/APIClient.swift",
+    "line": 145,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyApp/Sources/Legacy/OldController.swift",
+    "line": 500,
+    "reason": "File should contain 400 lines or less: currently contains 500",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  }
+]

@@ -1,0 +1,1082 @@
+[
+  {
+    "character": 2,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 27,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 96,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 331,
+    "reason": "Function body should be 40 lines or less: currently 160",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 74,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 387,
+    "reason": "Function should have complexity 121 or less: currently complexity equals 24",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 409,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 469,
+    "reason": "Function body should be 40 lines or less: currently 137",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 93,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 479,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/DetailViewController.swift",
+    "line": 481,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/HomeViewController.swift",
+    "line": 171,
+    "reason": "Line should be 100 characters or less: currently 122 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 56,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/HomeViewController.swift",
+    "line": 434,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/HomeViewController.swift",
+    "line": 486,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 9,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 159,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 3,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 297,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 17,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 358,
+    "reason": "File should contain 400 lines or less: currently contains 179",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 364,
+    "reason": "Line should be 100 characters or less: currently 137 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 21,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 396,
+    "reason": "File should contain 400 lines or less: currently contains 126",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 99,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 407,
+    "reason": "Function body should be 40 lines or less: currently 131",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 71,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/ProfileViewController.swift",
+    "line": 460,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 94,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/SearchViewController.swift",
+    "line": 146,
+    "reason": "Function should have complexity 121 or less: currently complexity equals 23",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/SearchViewController.swift",
+    "line": 458,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/SettingsViewController.swift",
+    "line": 59,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/SettingsViewController.swift",
+    "line": 269,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 41,
+    "file": "/Users/developer/LargeProject/Sources/Controllers/SettingsViewController.swift",
+    "line": 371,
+    "reason": "File should contain 400 lines or less: currently contains 161",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 13,
+    "reason": "Function body should be 40 lines or less: currently 159",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 76,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 99,
+    "reason": "File should contain 400 lines or less: currently contains 132",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 251,
+    "reason": "File should contain 400 lines or less: currently contains 197",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 36,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 268,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 363,
+    "reason": "File should contain 400 lines or less: currently contains 122",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Category.swift",
+    "line": 402,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 39,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 46,
+    "reason": "Function should have complexity 138 or less: currently complexity equals 23",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 80,
+    "reason": "Line should be 100 characters or less: currently 197 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 39,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 138,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 167,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 263,
+    "reason": "Function should have complexity 125 or less: currently complexity equals 23",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 99,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 350,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 389,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 98,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 406,
+    "reason": "File should contain 400 lines or less: currently contains 173",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 19,
+    "file": "/Users/developer/LargeProject/Sources/Models/Order.swift",
+    "line": 487,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 47,
+    "file": "/Users/developer/LargeProject/Sources/Models/Product.swift",
+    "line": 91,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 65,
+    "file": "/Users/developer/LargeProject/Sources/Models/Product.swift",
+    "line": 213,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Product.swift",
+    "line": 283,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 43,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 14,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 33,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 28,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 90,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 111,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 90,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 231,
+    "reason": "Function should have complexity 200 or less: currently complexity equals 23",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 53,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 272,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 92,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 373,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/Session.swift",
+    "line": 463,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 94,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 156,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 246,
+    "reason": "Function should have complexity 104 or less: currently complexity equals 24",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 283,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 58,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 360,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 67,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 378,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 63,
+    "file": "/Users/developer/LargeProject/Sources/Models/User.swift",
+    "line": 410,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 3,
+    "reason": "Line should be 100 characters or less: currently 170 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 47,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 50,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 160,
+    "reason": "Function should have complexity 176 or less: currently complexity equals 28",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 268,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 39,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 306,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/AuthService.swift",
+    "line": 486,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 42,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 18,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 62,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 92,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 127,
+    "reason": "Function body should be 40 lines or less: currently 194",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 318,
+    "reason": "Line should be 100 characters or less: currently 186 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 22,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 320,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 97,
+    "file": "/Users/developer/LargeProject/Sources/Services/DatabaseManager.swift",
+    "line": 380,
+    "reason": "Function should have complexity 167 or less: currently complexity equals 28",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 68,
+    "file": "/Users/developer/LargeProject/Sources/Services/ImageService.swift",
+    "line": 40,
+    "reason": "Function should have complexity 105 or less: currently complexity equals 19",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 57,
+    "file": "/Users/developer/LargeProject/Sources/Services/ImageService.swift",
+    "line": 365,
+    "reason": "File should contain 400 lines or less: currently contains 170",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/ImageService.swift",
+    "line": 391,
+    "reason": "File should contain 400 lines or less: currently contains 165",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 87,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 99,
+    "reason": "File should contain 400 lines or less: currently contains 191",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 43,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 117,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 84,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 167,
+    "reason": "File should contain 400 lines or less: currently contains 144",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 56,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 238,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 73,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 279,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 307,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 93,
+    "file": "/Users/developer/LargeProject/Sources/Services/NetworkManager.swift",
+    "line": 334,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 37,
+    "reason": "File should contain 400 lines or less: currently contains 177",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 93,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 99,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 129,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 88,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 232,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 96,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 340,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 16,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Constants.swift",
+    "line": 487,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 4,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 33,
+    "reason": "Function body should be 40 lines or less: currently 104",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 174,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 29,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 194,
+    "reason": "File should contain 400 lines or less: currently contains 157",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 9,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 381,
+    "reason": "Line should be 100 characters or less: currently 105 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 90,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 434,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 38,
+    "file": "/Users/developer/LargeProject/Sources/Utils/DateHelpers.swift",
+    "line": 480,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 57,
+    "file": "/Users/developer/LargeProject/Sources/Utils/StringExtensions.swift",
+    "line": 260,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 48,
+    "file": "/Users/developer/LargeProject/Sources/Utils/StringExtensions.swift",
+    "line": 352,
+    "reason": "File should contain 400 lines or less: currently contains 179",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 16,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 35,
+    "reason": "File should contain 400 lines or less: currently contains 160",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 17,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 42,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 97,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 122,
+    "reason": "Line should be 100 characters or less: currently 159 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 22,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 209,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 307,
+    "reason": "Line should be 100 characters or less: currently 139 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Utils/Validators.swift",
+    "line": 458,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 38,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 33,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 24,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 162,
+    "reason": "Variable name 'x' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 58,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 212,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 67,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 292,
+    "reason": "Function should have complexity 187 or less: currently complexity equals 26",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 57,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 348,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 10,
+    "file": "/Users/developer/LargeProject/Sources/Views/CustomTableViewCell.swift",
+    "line": 424,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 91,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 117,
+    "reason": "Function body should be 40 lines or less: currently 200",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 75,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 136,
+    "reason": "Function should have complexity 197 or less: currently complexity equals 20",
+    "rule_id": "cyclomatic_complexity",
+    "severity": "Warning",
+    "type": "Cyclomatic Complexity"
+  },
+  {
+    "character": 29,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 164,
+    "reason": "Line should be 100 characters or less: currently 190 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 7,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 165,
+    "reason": "Function body should be 40 lines or less: currently 145",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 247,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 374,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 56,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 410,
+    "reason": "Function body should be 40 lines or less: currently 177",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 99,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 436,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 52,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 475,
+    "reason": "File should contain 400 lines or less: currently contains 165",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 37,
+    "file": "/Users/developer/LargeProject/Sources/Views/FooterView.swift",
+    "line": 491,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Views/HeaderView.swift",
+    "line": 31,
+    "reason": "Line should be 100 characters or less: currently 162 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 9,
+    "file": "/Users/developer/LargeProject/Sources/Views/HeaderView.swift",
+    "line": 246,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Views/HeaderView.swift",
+    "line": 250,
+    "reason": "Variable 'unusedVar' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": 33,
+    "file": "/Users/developer/LargeProject/Sources/Views/HeaderView.swift",
+    "line": 292,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 82,
+    "file": "/Users/developer/LargeProject/Sources/Views/HeaderView.swift",
+    "line": 402,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/LargeProject/Sources/Views/LoadingView.swift",
+    "line": 100,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 100,
+    "file": "/Users/developer/LargeProject/Sources/Views/LoadingView.swift",
+    "line": 224,
+    "reason": "Function body should be 40 lines or less: currently 191",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  }
+]

@@ -18,5 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Flow
+      - name: Run lint
         run: npm run lint
+
+      - name: Run build
+        run: npm run build

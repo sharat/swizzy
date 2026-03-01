@@ -1,0 +1,128 @@
+[
+  {
+    "character": null,
+    "file": "/Users/developer/MyTodoApp/Sources/AppDelegate.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 120,
+    "file": "/Users/developer/MyTodoApp/Sources/Controllers/TodoListViewController.swift",
+    "line": 42,
+    "reason": "Line should be 100 characters or less: currently 125 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": 18,
+    "file": "/Users/developer/MyTodoApp/Sources/Controllers/TodoListViewController.swift",
+    "line": 67,
+    "reason": "Force cast should be avoided",
+    "rule_id": "force_cast",
+    "severity": "Error",
+    "type": "Force Cast"
+  },
+  {
+    "character": 25,
+    "file": "/Users/developer/MyTodoApp/Sources/Controllers/AddTodoViewController.swift",
+    "line": 18,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 32,
+    "file": "/Users/developer/MyTodoApp/Sources/Controllers/AddTodoViewController.swift",
+    "line": 145,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": 12,
+    "file": "/Users/developer/MyTodoApp/Sources/Models/Todo.swift",
+    "line": 33,
+    "reason": "Variable name 'id' should be between 3 and 40 characters long",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  },
+  {
+    "character": 8,
+    "file": "/Users/developer/MyTodoApp/Sources/Models/Category.swift",
+    "line": 156,
+    "reason": "Variable 'unusedColor' is never used",
+    "rule_id": "unused_variable",
+    "severity": "Warning",
+    "type": "Unused Variable"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyTodoApp/Sources/Services/CoreDataManager.swift",
+    "line": 500,
+    "reason": "File should contain 400 lines or less: currently contains 500",
+    "rule_id": "file_length",
+    "severity": "Error",
+    "type": "File Length"
+  },
+  {
+    "character": 45,
+    "file": "/Users/developer/MyTodoApp/Sources/Services/NetworkManager.swift",
+    "line": 78,
+    "reason": "Line should be 100 characters or less: currently 115 characters",
+    "rule_id": "line_length",
+    "severity": "Warning",
+    "type": "Line Length"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyTodoApp/Sources/Views/TodoTableViewCell.swift",
+    "line": 1,
+    "reason": "File name should match a type or extension declared in the file (if any)",
+    "rule_id": "file_name",
+    "severity": "Warning",
+    "type": "File Name"
+  },
+  {
+    "character": 15,
+    "file": "/Users/developer/MyTodoApp/Sources/Views/TodoTableViewCell.swift",
+    "line": 89,
+    "reason": "Force unwrapping should be avoided",
+    "rule_id": "force_unwrapping",
+    "severity": "Error",
+    "type": "Force Unwrapping"
+  },
+  {
+    "character": null,
+    "file": "/Users/developer/MyTodoApp/Sources/Extensions/UIColor+Extensions.swift",
+    "line": 45,
+    "reason": "Trailing whitespace forbidden",
+    "rule_id": "trailing_whitespace",
+    "severity": "Warning",
+    "type": "Trailing Whitespace"
+  },
+  {
+    "character": 60,
+    "file": "/Users/developer/MyTodoApp/Sources/Utils/DateFormatter+Shared.swift",
+    "line": 23,
+    "reason": "Function body should be 40 lines or less: currently contains 55 lines",
+    "rule_id": "function_body_length",
+    "severity": "Warning",
+    "type": "Function Body Length"
+  },
+  {
+    "character": 38,
+    "file": "/Users/developer/MyTodoApp/Sources/Utils/Constants.swift",
+    "line": 12,
+    "reason": "Variable name 'DB_VERSION' should not use all uppercase characters",
+    "rule_id": "identifier_name",
+    "severity": "Warning",
+    "type": "Identifier Name"
+  }
+]
