@@ -79,7 +79,7 @@ export const err = <E>(error: E): Result<never, E> => ({ success: false, error }
 /**
  * Type guard for checking if result is successful
  */
-export const isOk = <T, E>(result: Result<T, E>): result is { success: true; data: T } =>
+export const isOk = <T>(result: Result<T>): result is { success: true; data: T } =>
   result.success;
 
 /**

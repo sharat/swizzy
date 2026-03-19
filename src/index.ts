@@ -224,17 +224,10 @@ const parseCliArgs = (argv: string[]): Result<CliParseResult> => {
 };
 
 /**
- * Interface for a stream that tracks exit codes
- */
-interface StreamWithExitCode {
-  exitCode: number;
-}
-
-/**
  * Transform stream that formats SwiftLint JSON output into readable formats
  * Modernized with functional programming patterns
  */
-export class CompactStream extends Transform implements StreamWithExitCode {
+export class CompactStream extends Transform {
   public exitCode: number;
   private buffer: Buffer[];
   private config: CliConfig;
@@ -304,16 +297,7 @@ export class CompactStream extends Transform implements StreamWithExitCode {
       .filter(Boolean);
 
     for (const line of lines) {
-      const match = line.match(issueLineRegex);
-      if (!match) {
-        continue;
-      }
-
-      const file = match[1];
-      const lineNumber = match[2];
-      const character = match[3];
-      const severityRaw = match[4];
-      const messageRaw = match[5];
+      const [, file, lineNumber, character, severityRaw, messageRaw] = line.match(issueLineRegex) ?? [];
       if (!file || !lineNumber || !character || !severityRaw || !messageRaw) {
         continue;
       }

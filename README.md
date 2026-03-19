@@ -5,6 +5,8 @@
 [![ESLint](https://img.shields.io/badge/code_style-eslint-4B32C3.svg)](https://eslint.org)
 [![MIT License](https://img.shields.io/npm/l/swizzy.svg)](https://github.com/sharat/swizzy/blob/main/LICENSE)
 [![Node.js](https://img.shields.io/node/v/swizzy.svg)](https://nodejs.org)
+[![CI](https://github.com/sharat/swizzy/actions/workflows/pr.yml/badge.svg)](https://github.com/sharat/swizzy/actions)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-025e81?style=flat)](https://github.com/sharat/swizzy/security/dependabot)
 
 A modern, high-performance CLI tool that transforms SwiftLint JSON output into beautiful, readable formats. Built with TypeScript for reliability and featuring multiple output formats, configuration file support, and seamless CI/CD integration.
 
@@ -386,7 +388,7 @@ Error: Invalid format: invalid. Valid options: compact, json, table
 
 ### Prerequisites
 
-- Node.js 18.18.0 or higher
+- Node.js 20 or higher
 - npm, pnpm, yarn, or bun
 
 ### Setup
