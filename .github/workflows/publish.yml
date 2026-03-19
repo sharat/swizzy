@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,14 +27,9 @@ jobs:
         run: npm run build
 
       - name: Run tests
-        continue-on-error: true
-        run: cat anonymized_lint.json | node dist/index.js
-
-      - name: Setup NPM
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        run: npm test
 
       - name: Publish package
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm publish --access public
+        uses: npm/publish@v3
+        with:
+          provenance: true
