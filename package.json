@@ -1,6 +1,6 @@
 {
   "name": "swizzy",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "A modern CLI tool that beautifies SwiftLint JSON output into readable formats",
   "type": "commonjs",
   "main": "dist/index.js",

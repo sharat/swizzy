@@ -29,8 +29,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Install newer npm
-        run: npm install -g npm@latest
-
       - name: Publish package
         run: npm publish --access public --provenance
