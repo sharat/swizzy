@@ -30,6 +30,4 @@ jobs:
         run: npm test
 
       - name: Publish package
-        uses: npm/publish@v3
-        with:
-          provenance: true
+        run: npm publish --access public --provenance
