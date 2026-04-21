@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "CommonJS",
-    "lib": ["ES2022", "ES2022.Array", "ES2022.Object"],
+    "module": "Node16",
+    "lib": ["ES2022"],
+    "types": ["node"],
     "strict": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,
@@ -15,7 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
