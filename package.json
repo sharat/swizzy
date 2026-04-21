@@ -44,10 +44,10 @@
     "swizzy": "dist/index.js"
   },
   "devDependencies": {
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.6.0",
     "@types/text-table": "^0.2.5",
     "oxlint": "^1.56.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.0.18"
   },
   "dependencies": {
