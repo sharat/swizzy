@@ -14,6 +14,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -23,6 +26,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install
@@ -32,10 +36,6 @@ jobs:
 
       - name: Run build
         run: npm run build
-
-      - name: Setup NPM
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
       - name: Create release
         id: release
@@ -73,6 +73,4 @@ jobs:
             console.log('::set-output name=new_version::' + newVersion);
 
       - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm publish --access public
+        run: npm publish --access public --provenance
