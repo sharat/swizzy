@@ -7,11 +7,11 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "node": ">=20",
+    "npm": ">=9"
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }

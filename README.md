@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/swizzy.svg)](https://www.npmjs.com/package/swizzy)
 [![TypeScript](https://img.shields.io/badge/built_with-typescript-3178C6.svg)](https://www.typescriptlang.org)
-[![ESLint](https://img.shields.io/badge/code_style-eslint-4B32C3.svg)](https://eslint.org)
+[![oxlint](https://img.shields.io/badge/code_style-oxlint-F0501A.svg)](https://oxc.rs/docs/guide/usage/linter)
 [![MIT License](https://img.shields.io/npm/l/swizzy.svg)](https://github.com/sharat/swizzy/blob/main/LICENSE)
 [![Node.js](https://img.shields.io/node/v/swizzy.svg)](https://nodejs.org)
 [![CI](https://github.com/sharat/swizzy/actions/workflows/pr.yml/badge.svg)](https://github.com/sharat/swizzy/actions)
@@ -389,7 +389,7 @@ Error: Invalid format: invalid. Valid options: compact, json, table
 ### Prerequisites
 
 - Node.js 20 or higher
-- npm, pnpm, yarn, or bun
+- npm 9+, pnpm, yarn, or bun
 
 ### Setup
 
@@ -500,7 +500,7 @@ We welcome contributions! Please follow these steps:
 
 ### Development Guidelines
 
-- **Code Style**: Follow ESLint configuration
+- **Code Style**: Follow oxlint configuration
 - **Type Safety**: Maintain 100% TypeScript coverage
 - **Testing**: Write tests for all new features
 - **Documentation**: Update README and inline docs
