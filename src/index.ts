@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
 import { Transform } from 'stream';
-import table from 'text-table';
 import { parseArgs } from 'node:util';
-import { createColors } from 'picocolors';
 import {
   SwiftlintJsonIssue,
   SwiftlintJsonOutputSchema,
@@ -25,7 +23,64 @@ import { resolve } from 'path';
 
 const stripAnsi = (text: string): string => text.replace(/\x1b\[[0-9;]*m/g, '');
 
-type Colorizer = ReturnType<typeof createColors>;
+export interface Colorizer {
+  bold: (s: string) => string;
+  dim: (s: string) => string;
+  underline: (s: string) => string;
+  red: (s: string) => string;
+  yellow: (s: string) => string;
+  cyan: (s: string) => string;
+  blue: (s: string) => string;
+}
+
+const wrap = (open: string, close: string) => (s: string): string => open + s + close;
+
+export const createColors = (enabled: boolean): Colorizer => {
+  if (!enabled) {
+    const identity = (s: string): string => s;
+    return { bold: identity, dim: identity, underline: identity, red: identity, yellow: identity, cyan: identity, blue: identity };
+  }
+  return {
+    bold: wrap('\x1b[1m', '\x1b[22m'),
+    dim: wrap('\x1b[2m', '\x1b[22m'),
+    underline: wrap('\x1b[4m', '\x1b[24m'),
+    red: wrap('\x1b[31m', '\x1b[39m'),
+    yellow: wrap('\x1b[33m', '\x1b[39m'),
+    cyan: wrap('\x1b[36m', '\x1b[39m'),
+    blue: wrap('\x1b[34m', '\x1b[39m')
+  };
+};
+
+export interface TableOptions {
+  align?: readonly ('l' | 'r' | null)[];
+  stringLength?: (s: string) => number;
+}
+
+export const table = (rows: string[][], options?: TableOptions): string => {
+  if (rows.length === 0) return '';
+  const strLen = options?.stringLength ?? ((s: string) => stripAnsi(s).length);
+  const alignments = options?.align ?? [];
+  const colWidths: number[] = [];
+
+  for (const row of rows) {
+    row.forEach((cell, colIndex) => {
+      const len = strLen(cell ?? '');
+      colWidths[colIndex] = Math.max(colWidths[colIndex] ?? 0, len);
+    });
+  }
+
+  return rows.map(row => {
+    return row.map((cell, colIndex) => {
+      const cellStr = cell ?? '';
+      const width = colWidths[colIndex] ?? 0;
+      const len = strLen(cellStr);
+      const pad = Math.max(0, width - len);
+      const align = alignments[colIndex];
+      return align === 'r' ? ' '.repeat(pad) + cellStr : cellStr + ' '.repeat(pad);
+    }).join('  ');
+  }).join('\n');
+};
+
 const getColors = (noColor: boolean): Colorizer => createColors(!noColor);
 
 // Version detection with better error handling

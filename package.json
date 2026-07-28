@@ -50,13 +50,7 @@
     "typescript": "^7.0.2",
     "vitest": "^4.0.18"
   },
-  "dependencies": {
-    "inherits": "^2.0.4",
-    "picocolors": "^1.1.1",
-    "readable-stream": "^4.7.0",
-    "text-table": "^0.2.0",
-    "zod": "^4.3.6"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sharat/swizzy.git"
