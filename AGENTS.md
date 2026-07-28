@@ -84,6 +84,6 @@ git push origin main --follow-tags
 
 ## Notes
 - `prepublishOnly` script runs build + test before publishing
-- Node 24 is the primary version
+- Node 26 is the primary version
 - No major version bumps via Dependabot (configured to skip)
 - Uses npm provenance for supply chain security
