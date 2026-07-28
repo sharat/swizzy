@@ -61,29 +61,25 @@ npm audit
 
 ### Release Process
 
-**Option 1: Manual workflow dispatch (Recommended)**
+**Option 1: Standard npm version (Recommended)**
 ```bash
-# Trigger release workflow (bumps patch version, creates tag, publishes)
-cd /Users/sarat/oss/swizzy && gh workflow run release.yml
-```
-- Select `patch` or `minor` version bump
-- Workflow creates git tag and pushes it
-- Tag push triggers `publish.yml` → publishes to npm
-
-**Option 2: Manual npm version**
-```bash
-cd /Users/sarat/oss/swizzy
-npm version patch   # bumps version in package.json, creates git tag
+npm version patch   # or minor/major: bumps version in package.json and creates git tag
 git push origin main --follow-tags
 ```
-- Tag push (e.g., `v2.3.3`) triggers `.github/workflows/publish.yml`
+- Tag push (e.g., `v2.4.0`) triggers `.github/workflows/publish.yml`
 - Workflow: install → build → test → publish to npm with provenance
+
+**Option 2: GitHub workflow dispatch**
+```bash
+gh workflow run release.yml -f version_type=patch  # or minor
+```
 
 ### Requirements
 - `NPM_AUTH_TOKEN` secret configured in GitHub (for npm publishing)
 
 ## Notes
 - `prepublishOnly` script runs build + test before publishing
-- Node 26 is the primary version
+- Node 26 is the primary runtime version
+- TypeScript 7.0+ is used for type-checking and compilation
 - No major version bumps via Dependabot (configured to skip)
 - Uses npm provenance for supply chain security
