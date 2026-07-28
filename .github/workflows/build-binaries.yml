@@ -57,9 +57,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: swizzy-native-binaries
-          path: |
-            dist/binaries/*.tar.gz
-            dist/binaries/*.zip
+          path: dist/binaries/*
 
       - name: Attach binaries to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -67,8 +65,6 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           generate_release_notes: true
-          files: |
-            dist/binaries/*.tar.gz
-            dist/binaries/*.zip
+          files: dist/binaries/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
