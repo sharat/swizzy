@@ -55,8 +55,10 @@ npm audit
 |----------|------|---------|
 | PR | `.github/workflows/pr.yml` | Run tests on PRs |
 | Publish | `.github/workflows/publish.yml` | Publish to npm on git tag push |
+| Native Binaries | `.github/workflows/build-binaries.yml` | Build & attach cross-platform binaries on tag push |
+| Monthly Release | `.github/workflows/monthly-release.yml` | Automated monthly dependency update & release (1st of month) |
 | Release | `.github/workflows/release.yml` | Manual release (bumps version, creates tag) |
-| Dependabot | `.github/dependabot.yml` | Weekly Friday 03:30 UTC dependency updates |
+| Dependabot | `.github/dependabot.yml` | Monthly (1st of month) dependency & security updates |
 | Auto-merge | `.github/workflows/dependabot-auto-merge.yml` | Auto-merge Dependabot PRs on open |
 
 ### Release Process

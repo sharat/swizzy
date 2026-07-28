@@ -3,9 +3,9 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "03:30"
+      interval: "monthly"
+      day: "1"
+      time: "00:00"
       timezone: "UTC"
     open-pull-requests-limit: 10
     commit-message:
@@ -14,6 +14,7 @@ updates:
     labels:
       - "dependencies"
       - "automated"
+      - "security"
     reviewers:
       - "sharat"
     ignore:
@@ -30,9 +31,9 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "03:30"
+      interval: "monthly"
+      day: "1"
+      time: "00:00"
       timezone: "UTC"
     open-pull-requests-limit: 5
     commit-message:

@@ -1,0 +1,61 @@
+name: Monthly Automated Release
+
+on:
+  schedule:
+    # Run at 00:00 UTC on the 1st day of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  monthly-release:
+    name: Update Dependencies & Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '26'
+          cache: 'npm'
+
+      - name: Configure Git User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Audit dependencies for vulnerabilities
+        run: npm audit || true
+
+      - name: Update dependencies
+        run: npm update
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run test suite
+        run: npm test && npm run test:integration
+
+      - name: Build project
+        run: npm run build
+
+      - name: Bump patch version & tag
+        id: version
+        run: |
+          NEW_VERSION=$(npm version patch --no-git-tag-version)
+          git add package.json package-lock.json
+          git commit -m "chore(release): monthly automated release ${NEW_VERSION}"
+          git tag "${NEW_VERSION}"
+
+      - name: Push release commit & tag
+        run: git push origin main --tags
