@@ -556,6 +556,34 @@ swiftlint lint --reporter json | swizzy --quiet
 swiftlint lint --reporter json --path src/ | swizzy
 ```
 
+### ⚡ Native Executables & Early-Stage Native Compilation (`scriptc`)
+
+> [!NOTE]
+> Native compilation outcomes with `scriptc` are experimental, early-stage, and in beta as compiler lowering support for Node.js standard library APIs continues to evolve.
+
+#### 1. Pre-built Native Executables
+Cross-platform standalone binaries (zero Node.js dependency required) are automatically compiled for every release and available on the [GitHub Releases](https://github.com/sharat/swizzy/releases) page:
+- **macOS**: `swizzy-macos-arm64` (Apple Silicon), `swizzy-macos-x64` (Intel)
+- **Linux**: `swizzy-linux-x64`, `swizzy-linux-arm64`
+- **Windows**: `swizzy-windows-x64.exe`
+
+#### 2. Experimental `scriptc` Native Compilation (Vercel Labs)
+We evaluated experimental static native compilation using [`scriptc`](https://scriptc.dev):
+
+| Target | Description | Binary Size | Cold-Start Time | Speedup vs Node.js |
+| --- | --- | --- | --- | --- |
+| **Static Native Binary** *(Beta)* | Pure TypeScript (Static Native LLVM compilation) | **349 KB** | **5.75 ms** | **~10.6x faster** |
+| **Dynamic Native Binary** *(Beta)* | TypeScript + NPM packages via `--dynamic` island | **1.1 MB** | **17.45 ms** | **~3.5x faster** |
+| **Node.js Runtime** | Standard `node dist/index.js` + `node_modules` | **~25 MB+** | **61.28 ms** | 1.0x (baseline) |
+
+```bash
+# Test static native compilation with scriptc
+npx scriptc build scratch/static_bench.ts -o scratch/static-native
+
+# Test dynamic native compilation with scriptc
+npx scriptc build scratch/dynamic_bench.ts --dynamic -o scratch/dynamic-native
+```
+
 ### Getting Help
 
 - **Issues**: [GitHub Issues](https://github.com/sharat/swizzy/issues)
