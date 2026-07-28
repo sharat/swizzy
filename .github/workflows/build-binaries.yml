@@ -43,11 +43,23 @@ jobs:
       - name: Build Windows (x64)
         run: bun build --compile --target=bun-windows-x64 src/index.ts --outfile dist/binaries/swizzy-windows-x64.exe
 
+      - name: Compress binaries into archives
+        run: |
+          cd dist/binaries
+          tar -czvf swizzy-macos-arm64.tar.gz swizzy-macos-arm64
+          tar -czvf swizzy-macos-x64.tar.gz swizzy-macos-x64
+          tar -czvf swizzy-linux-x64.tar.gz swizzy-linux-x64
+          tar -czvf swizzy-linux-arm64.tar.gz swizzy-linux-arm64
+          zip swizzy-windows-x64.zip swizzy-windows-x64.exe
+          cd ../..
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: swizzy-native-binaries
-          path: dist/binaries/*
+          path: |
+            dist/binaries/*.tar.gz
+            dist/binaries/*.zip
 
       - name: Attach binaries to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -55,6 +67,8 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           generate_release_notes: true
-          files: dist/binaries/*
+          files: |
+            dist/binaries/*.tar.gz
+            dist/binaries/*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
