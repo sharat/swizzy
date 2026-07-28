@@ -20,6 +20,13 @@ npm run test:smoke                # smoke test
 # Linting
 npm run lint                      # oxlint check
 npm run lint:fix                  # auto-fix issues
+
+# Just Task Runner (Alternative)
+just help                         # List available task commands
+just ci                           # Run full lint, build, & test pipeline
+just skills-check                 # Check for agent skill updates
+just skills-update                # Update installed agent skills
+just benchmark                    # Run local performance benchmarks
 ```
 
 ## Project Overview
