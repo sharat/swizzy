@@ -388,7 +388,7 @@ Error: Invalid format: invalid. Valid options: compact, json, table
 
 ### Prerequisites
 
-- Node.js 20 or higher
+- Node.js 26 or higher
 - npm 9+, pnpm, yarn, or bun
 
 ### Setup
