@@ -56,6 +56,15 @@ yarn global add swizzy
 yarn dlx swizzy
 ```
 
+#### Homebrew (macOS / Linux)
+```bash
+# Install via Homebrew Formula
+brew install sharat/swizzy/swizzy
+
+# Or directly from formula file
+brew install --formula https://raw.githubusercontent.com/sharat/swizzy/main/Formula/swizzy.rb
+```
+
 #### bun
 ```bash
 # Global installation
