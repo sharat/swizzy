@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": ">=24",
+    "node": ">=26",
     "npm": ">=11"
   },
   "exports": {
@@ -47,7 +47,7 @@
     "@types/node": "^25.6.0",
     "@types/text-table": "^0.2.5",
     "oxlint": "^1.56.0",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vitest": "^4.0.18"
   },
   "dependencies": {
