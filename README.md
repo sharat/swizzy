@@ -556,32 +556,39 @@ swiftlint lint --reporter json | swizzy --quiet
 swiftlint lint --reporter json --path src/ | swizzy
 ```
 
-### ⚡ Native Executables & Early-Stage Native Compilation (`scriptc`)
+### ⚡ Performance, Zero Dependencies & Native Executables
+
+#### 1. Zero External Dependencies
+`swizzy` is built with **0 external runtime dependencies** (`"dependencies": {}`). All ANSI styling, schema validation, and table formatting use lightweight, zero-overhead native TypeScript abstractions.
+
+#### 2. Local Benchmark Across Output Formats & Dataset Sizes
+
+| Dataset Size | `compact` Format | `table` Format | `json` Format | `--quiet` Mode | Speedup vs. Legacy Dependencies |
+| --- | --- | --- | --- | --- | --- |
+| **Small (100 issues / 26 KB)** | **27.15 ms** | **25.67 ms** | **25.45 ms** | **26.00 ms** | **~2.6x faster** |
+| **Medium (2,500 issues / 668 KB)** | **36.66 ms** | **34.74 ms** | **31.64 ms** | **36.26 ms** | **~2.4x faster** |
+| **Large (10,000 issues / 2.67 MB)** | **61.22 ms** | **55.09 ms** | **47.87 ms** | **61.91 ms** | **~2.2x faster** |
+| **Extra Large (50,000 issues / 13.4 MB)** | **191.16 ms** | **160.62 ms** | **138.03 ms** | **186.48 ms** | **~2.0x faster** |
+
+#### 3. Pre-built Native Executables
+Standalone compressed binary archives (zero Node.js dependency required) are automatically compiled for every release and attached to the [GitHub Releases](https://github.com/sharat/swizzy/releases) page:
+- **macOS**: `swizzy-macos-arm64.tar.gz` (Apple Silicon), `swizzy-macos-x64.tar.gz` (Intel)
+- **Linux**: `swizzy-linux-x64.tar.gz`, `swizzy-linux-arm64.tar.gz`
+- **Windows**: `swizzy-windows-x64.zip`
+
+#### 4. Experimental `scriptc` Native Compilation (`scriptc.dev`)
 
 > [!NOTE]
-> Native compilation outcomes with `scriptc` are experimental, early-stage, and in beta as compiler lowering support for Node.js standard library APIs continues to evolve.
+> Native LLVM static compilation with `scriptc` is experimental, early-stage, and in beta as compiler lowering support for Node.js standard library APIs continues to evolve.
 
-#### 1. Pre-built Native Executables
-Cross-platform standalone binaries (zero Node.js dependency required) are automatically compiled for every release and available on the [GitHub Releases](https://github.com/sharat/swizzy/releases) page:
-- **macOS**: `swizzy-macos-arm64` (Apple Silicon), `swizzy-macos-x64` (Intel)
-- **Linux**: `swizzy-linux-x64`, `swizzy-linux-arm64`
-- **Windows**: `swizzy-windows-x64.exe`
-
-#### 2. Experimental `scriptc` Native Compilation (Vercel Labs)
-We evaluated experimental static native compilation using [`scriptc`](https://scriptc.dev):
-
-| Target | Description | Binary Size | Cold-Start Time | Speedup vs Node.js |
+| Target | Description | Binary Size | Cold-Start Time | Speedup vs Standard Node.js |
 | --- | --- | --- | --- | --- |
 | **Static Native Binary** *(Beta)* | Pure TypeScript (Static Native LLVM compilation) | **349 KB** | **5.75 ms** | **~10.6x faster** |
 | **Dynamic Native Binary** *(Beta)* | TypeScript + NPM packages via `--dynamic` island | **1.1 MB** | **17.45 ms** | **~3.5x faster** |
-| **Node.js Runtime** | Standard `node dist/index.js` + `node_modules` | **~25 MB+** | **61.28 ms** | 1.0x (baseline) |
 
 ```bash
-# Test static native compilation with scriptc
-npx scriptc build scratch/static_bench.ts -o scratch/static-native
-
-# Test dynamic native compilation with scriptc
-npx scriptc build scratch/dynamic_bench.ts --dynamic -o scratch/dynamic-native
+# Run local benchmarks using Just
+just benchmark
 ```
 
 ### Getting Help
