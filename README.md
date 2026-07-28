@@ -570,14 +570,14 @@ swiftlint lint --reporter json --path src/ | swizzy
 #### 1. Zero External Dependencies
 `swizzy` is built with **0 external runtime dependencies** (`"dependencies": {}`). All ANSI styling, schema validation, and table formatting use lightweight, zero-overhead native TypeScript abstractions.
 
-#### 2. Local Benchmark Across Output Formats & Dataset Sizes
+#### 2. Local Benchmark Across Output Formats & Dataset Sizes (`swizzy v2.5.0`)
 
 | Dataset Size | `compact` Format | `table` Format | `json` Format | `--quiet` Mode | Speedup vs. Legacy Dependencies |
 | --- | --- | --- | --- | --- | --- |
-| **Small (100 issues / 26 KB)** | **27.15 ms** | **25.67 ms** | **25.45 ms** | **26.00 ms** | **~2.6x faster** |
-| **Medium (2,500 issues / 668 KB)** | **36.66 ms** | **34.74 ms** | **31.64 ms** | **36.26 ms** | **~2.4x faster** |
-| **Large (10,000 issues / 2.67 MB)** | **61.22 ms** | **55.09 ms** | **47.87 ms** | **61.91 ms** | **~2.2x faster** |
-| **Extra Large (50,000 issues / 13.4 MB)** | **191.16 ms** | **160.62 ms** | **138.03 ms** | **186.48 ms** | **~2.0x faster** |
+| **Small (100 issues / 26 KB)** | **26.98 ms** | **27.59 ms** | **26.82 ms** | **28.11 ms** | **~2.5x faster** |
+| **Medium (2,500 issues / 668 KB)** | **35.21 ms** | **34.75 ms** | **31.92 ms** | **35.39 ms** | **~2.4x faster** |
+| **Large (10,000 issues / 2.67 MB)** | **57.06 ms** | **51.94 ms** | **44.93 ms** | **57.62 ms** | **~2.4x faster** |
+| **Extra Large (50,000 issues / 13.4 MB)** | **166.85 ms** | **141.95 ms** | **115.78 ms** | **168.47 ms** | **~2.1x faster** |
 
 #### 3. Pre-built Native Executables
 Standalone compressed binary archives (zero Node.js dependency required) are automatically compiled for every release and attached to the [GitHub Releases](https://github.com/sharat/swizzy/releases) page:
